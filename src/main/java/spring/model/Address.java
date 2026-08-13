@@ -11,11 +11,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Employee {
+public class Address {
 
-	private int id;
-	private String name, gender;
+	
+	private String city, state;
 
-	private Address address;
+	
 
 }
