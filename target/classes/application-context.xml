@@ -19,24 +19,57 @@
 		<property name="name" value="Vikas" />
 		<property name="gender" value="Male" />
 		<property name="address" ref="add1" />
+<!--		list-->
+		<property name="list">
+			<list>
+				<value>3464</value>
+				<value>null</value>
+				<value>abc</value>
+				<value>632</value>
+				<value>3464</value>
+				<value>000</value>
+			</list>
+		</property>
+<!--		set-->
+		<property name="set">
+			<set>
+				<value>3464</value>
+				<value>null</value>
+				<value>abc</value>
+				<value>632</value>
+				<value>3464</value>
+				<value>000</value>
+			</set>
+		</property>
+<!--		map-->
+		<property name="map">
+			<map>
+				<entry key="1" value="One"></entry>
+				<entry key="2" value="Two"></entry>
+				<entry key="3" value="Three"></entry>
+				<entry key="4" value="Four"></entry>
+				<entry key="5" value="Five"></entry>
+			</map>
+		</property>
+
 
 	</bean>
 
 
-	<bean name="add2" class="spring.model.Address">
-		<constructor-arg name="city" value="Noida" />
-		<constructor-arg name="state" value="UP" />
-	</bean>
+<!--	<bean name="add2" class="spring.model.Address">-->
+<!--		<constructor-arg name="city" value="Noida" />-->
+<!--		<constructor-arg name="state" value="UP" />-->
+<!--	</bean>-->
 
 
 
-	<bean name="emp2" class="spring.model.Employee">
-		<constructor-arg name="id" value="222" />
-		<constructor-arg name="name" value="Anurag" />
-		<constructor-arg name="gender" value="Male" />
-		<constructor-arg name="address" ref="add2" />
+<!--	<bean name="emp2" class="spring.model.Employee">-->
+<!--		<constructor-arg name="id" value="222" />-->
+<!--		<constructor-arg name="name" value="Anurag" />-->
+<!--		<constructor-arg name="gender" value="Male" />-->
+<!--		<constructor-arg name="address" ref="add2" />-->
 
-	</bean>
+<!--	</bean>-->
 
 
 </beans>
