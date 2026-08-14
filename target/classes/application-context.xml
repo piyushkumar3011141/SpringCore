@@ -56,20 +56,53 @@
 	</bean>
 
 
-<!--	<bean name="add2" class="spring.model.Address">-->
-<!--		<constructor-arg name="city" value="Noida" />-->
-<!--		<constructor-arg name="state" value="UP" />-->
-<!--	</bean>-->
+	<bean name="add2" class="spring.model.Address">
+		<constructor-arg name="city" value="Noida" />
+		<constructor-arg name="state" value="UP" />
+	</bean>
 
 
 
-<!--	<bean name="emp2" class="spring.model.Employee">-->
-<!--		<constructor-arg name="id" value="222" />-->
-<!--		<constructor-arg name="name" value="Anurag" />-->
-<!--		<constructor-arg name="gender" value="Male" />-->
-<!--		<constructor-arg name="address" ref="add2" />-->
-
-<!--	</bean>-->
+	<bean name="emp2" class="spring.model.Employee">
+		<constructor-arg name="id" value="222" />
+		<constructor-arg name="name" value="Anurag" />
+		<constructor-arg name="gender" value="Male" />
+		<constructor-arg name="address" ref="add2" />
+<!--		list-->
+		<constructor-arg name="list">
+			<list>
+				<value>4050</value>
+				<value>null</value>
+				<value>678</value>
+				<value>xyz</value>
+				<value>2345</value>
+				<value>2345</value>
+			</list>
+		</constructor-arg>
+<!--		set-->
+		<constructor-arg name="set">
+			<set>
+				<value>4050</value>
+				<value>null</value>
+				<value>678</value>
+				<value>xyz</value>
+				<value>2345</value>
+				<value>2345</value>
+			</set>
+		</constructor-arg>
+<!--		map-->
+		<constructor-arg name="map">
+			<map>
+				<entry key="1" value="One"></entry>
+				<entry key="2" value="Two"></entry>
+				<entry key="3" value="Three"></entry>
+				<entry key="4" value="Four"></entry>
+				<entry key="5" value="Five"></entry>
+			</map>
+		</constructor-arg>
+		
+	</bean>
+	
 
 
 </beans>
