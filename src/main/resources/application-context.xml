@@ -22,10 +22,11 @@
 <!--		list by property-->
 		<property name="list">
 			<list>
-				<value>3464</value>
+				<value>3465</value>
 				<value>null</value>
 				<value>abc</value>
 				<value>632</value>
+				<value>3400</value>
 				<value>3464</value>
 				<value>000</value>
 			</list>
