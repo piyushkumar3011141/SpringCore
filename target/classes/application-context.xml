@@ -13,7 +13,7 @@
 	</bean>
 
 
-	<bean name="emp1" class="spring.model.Employee">
+	<bean name="emp1" class="spring.model.Employee" init-method="xmlInitMethod" destroy-method="xmlDestroyMethod">
 
 		<property name="id" value="1011" />
 		<property name="name" value="Vikas" />
@@ -23,20 +23,7 @@
 	</bean>
 
 
-	<bean name="add2" class="spring.model.Address">
-		<constructor-arg name="city" value="Noida" />
-		<constructor-arg name="state" value="UP" />
-	</bean>
-
-
-
-	<bean name="emp2" class="spring.model.Employee">
-		<constructor-arg name="id" value="222" />
-		<constructor-arg name="name" value="Anurag" />
-		<constructor-arg name="gender" value="Male" />
-		<constructor-arg name="address" ref="add2" />
-
-	</bean>
+	
 
 
 </beans>

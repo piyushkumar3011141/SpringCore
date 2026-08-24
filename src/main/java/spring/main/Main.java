@@ -9,14 +9,13 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		ApplicationContext ioc = new ClassPathXmlApplicationContext("application-context.xml");
+		ClassPathXmlApplicationContext ioc = new ClassPathXmlApplicationContext("application-context.xml");
 		
 		Employee bean1 = ioc.getBean("emp1",Employee.class);
 		System.out.println(bean1);
 		
+		ioc.registerShutdownHook();
 		
-		Employee bean2 = ioc.getBean("emp2",Employee.class);
-		System.out.println(bean2);
 		
 	}
 
