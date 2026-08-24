@@ -17,5 +17,8 @@ public class Employee {
 	private String name, gender;
 
 	private Address address;
-
+	 // Constructor Autowiring ke liye
+    public Employee(Address address) {
+        this.address = address;
+    }
 }

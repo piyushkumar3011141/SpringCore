@@ -4,39 +4,60 @@
 	xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- bean definitions here -->
+		<!--autowire="byName"-->
 
 
-	<bean name="add1" class="spring.model.Address">
+<!--	<bean name="address" class="spring.model.Address">-->
+<!--		<property name="city" value="Pune" />-->
+<!--		<property name="state" value="Maharashtra" />-->
+<!--	</bean>-->
+
+<!--	autowire = byname("property name and bean name must be same")-->
+<!--	<bean name="emp1" class="spring.model.Employee" autowire="byName">-->
+
+<!--		<property name="id" value="1011" />-->
+<!--		<property name="name" value="Vikas" />-->
+<!--		<property name="gender" value="Male" />-->
+
+<!--	</bean>-->
+
+
+		<!--autowire="byType"-->
+		
+<!--	<bean name="add" class="spring.model.Address">-->
+<!--		<property name="city" value="Pune" />-->
+<!--		<property name="state" value="Maharashtra" />-->
+<!--	</bean>-->
+
+<!--	autowire = byType("property name and bean name must be different". Use setter method .Only allocated in only one bean)-->
+<!--	<bean name="emp1" class="spring.model.Employee" autowire="byType">-->
+
+<!--		<property name="id" value="1011" />-->
+<!--		<property name="name" value="Vikas" />-->
+<!--		<property name="gender" value="Male" />-->
+		
+
+<!--	</bean>-->
+
+
+		<!--autowire="byName"-->
+
+	<bean name="address" class="spring.model.Address">
 		<property name="city" value="Pune" />
 		<property name="state" value="Maharashtra" />
 	</bean>
 
-
-	<bean name="emp1" class="spring.model.Employee">
+<!--	autowire = byType("property name and bean name must be different". Use setter method .Only allocated in only one bean)-->
+	<bean name="emp1" class="spring.model.Employee" autowire="constructor">
 
 		<property name="id" value="1011" />
 		<property name="name" value="Vikas" />
 		<property name="gender" value="Male" />
-		<property name="address" ref="add1" />
+		
 
 	</bean>
 
-
-	<bean name="add2" class="spring.model.Address">
-		<constructor-arg name="city" value="Noida" />
-		<constructor-arg name="state" value="UP" />
-	</bean>
-
-
-
-	<bean name="emp2" class="spring.model.Employee">
-		<constructor-arg name="id" value="222" />
-		<constructor-arg name="name" value="Anurag" />
-		<constructor-arg name="gender" value="Male" />
-		<constructor-arg name="address" ref="add2" />
-
-	</bean>
+	
 
 
 </beans>
