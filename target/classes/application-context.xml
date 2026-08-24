@@ -7,10 +7,7 @@
 	<!-- bean definitions here -->
 
 
-	<bean name="add1" class="spring.model.Address">
-		<property name="city" value="Pune" />
-		<property name="state" value="Maharashtra" />
-	</bean>
+	
 
 
 	<bean name="emp1" class="spring.model.Employee">
@@ -18,15 +15,17 @@
 		<property name="id" value="1011" />
 		<property name="name" value="Vikas" />
 		<property name="gender" value="Male" />
-		<property name="address" ref="add1" />
+		<property name="address">
+			<bean name="add1" class="spring.model.Address">
+				<property name="city" value="Pune" />
+				<property name="state" value="Maharashtra" />
+			</bean>
+		</property>
 
 	</bean>
 
 
-	<bean name="add2" class="spring.model.Address">
-		<constructor-arg name="city" value="Noida" />
-		<constructor-arg name="state" value="UP" />
-	</bean>
+	
 
 
 
@@ -34,7 +33,12 @@
 		<constructor-arg name="id" value="222" />
 		<constructor-arg name="name" value="Anurag" />
 		<constructor-arg name="gender" value="Male" />
-		<constructor-arg name="address" ref="add2" />
+		<constructor-arg name="address">
+			<bean name="add2" class="spring.model.Address">
+			<constructor-arg name="city" value="Noida" />
+			<constructor-arg name="state" value="UP" />
+			</bean>
+		</constructor-arg>
 
 	</bean>
 
