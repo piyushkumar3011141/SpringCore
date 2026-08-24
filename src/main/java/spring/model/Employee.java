@@ -11,11 +11,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Employee {
+abstract public class Employee {
 
 	private int id;
 	private String name, gender;
-
+	
 	private Address address;
+	public abstract Address applyAddress();
+	
+	
 
 }
