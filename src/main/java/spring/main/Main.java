@@ -9,14 +9,12 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		ApplicationContext ioc = new ClassPathXmlApplicationContext("application-context.xml");
+		ApplicationContext bean = new ClassPathXmlApplicationContext("parent_child.xml");
+		Employee e2 = bean.getBean("child", Employee.class);
+		System.out.println(e2);
+
+
 		
-		Employee bean1 = ioc.getBean("emp1",Employee.class);
-		System.out.println(bean1);
-		
-		
-		Employee bean2 = ioc.getBean("emp2",Employee.class);
-		System.out.println(bean2);
 		
 	}
 
